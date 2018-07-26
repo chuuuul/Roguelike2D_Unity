@@ -61,15 +61,17 @@
      <Compile Include="Assets\_Complete-Game\Scripts\Player.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\SoundManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Wall.cs" />
+     <Compile Include="Assets\Script\BoardManager.cs" />
+     <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
      <None Include="Assets\TutorialInfo\Fonts\LICENSE.txt" />
      <None Include="Assets\Fonts\OFL.txt" />
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/Project/unity/Roguelike_2D/Roguelike2D/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Project/unity/Roguelike_2D/Roguelike2D/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>D:/Project/unity/Roguelike_2D/Roguelike2D/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
