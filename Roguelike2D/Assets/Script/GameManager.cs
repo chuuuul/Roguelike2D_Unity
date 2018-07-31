@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject aa;
-    // Use this for initialization
-    void Start () {
+    public BoardManager boardScript;
+    static public GameManager instance = null;
 
+    private int level = 3;
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+        boardScript = GetComponent<BoardManager>();
+        InitGame();
         
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void InitGame()
+    {
+        boardScript.SetupScene(level);
+    }
+
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BoardManager : MonoBehaviour
 {
     [System.Serializable]
@@ -34,14 +35,6 @@ public class BoardManager : MonoBehaviour
 
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3> ();
-
-
-    void Start()
-    {
-
-        SetupScene(8);
-    }
-
 
     void InitialiseList()                                   // 초기화 - 타일 놓을 영역을 gridPosition에 ADD
     {
@@ -113,11 +106,11 @@ public class BoardManager : MonoBehaviour
         LayoutObjectAtRandom(wallTiles, wallCount.min, wallCount.max);
         // food 생성
         LayoutObjectAtRandom(foodTiles, foodCount.min, foodCount.max);
-
+        
         // log2 level 하여 몬스터수 지정
         int enemyAmount = (int) Mathf.Log(level, 2.0f);
         LayoutObjectAtRandom(enemyTiles , enemyAmount, enemyAmount);
-
+        
         // exit 생성
         Instantiate(exit, new Vector3(column - 1, row - 1, 0.0f), Quaternion.identity);
     }
